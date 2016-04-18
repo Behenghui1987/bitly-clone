@@ -1,2 +1,12 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<h1>Hello To Bitly</h1>
+<p>Please key in your URL below</p>
+
+<form action="/urls" method="post">
+	Enter URL:
+	<input type = "text" name="long_url" placeholder = "Type here!!">
+	<input type = "submit" value="Submit">
+</form>
+
+<% unless url == '' %>
+	<p> Shortened result: <%=url %></p>
+<% end%>
