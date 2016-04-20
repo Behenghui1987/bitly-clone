@@ -1,12 +1,19 @@
-<h1>Hello To Bitly</h1>
-<p>Please key in your URL below</p>
+<h1>Your solution is HERE</h1>
 
 <form action="/urls" method="post">
-	Enter URL:
-	<input type = "text" name="long_url" placeholder = "Type here!!">
-	<input type = "submit" value="Submit">
+	
+	<input type = "text" name ="long_url" placeholder = "Please KEY IN here" id="link">
+	<input type = "submit" value ="Submit URL" id="answer">
 </form>
 
 <% unless url == '' %>
-	<p> Shortened result: <%=url %></p>
+	<p> Shortened result: <a href=<%= @new_url.short_url %>>http://www.bit.beh/<%= url %> </a> </p>
 <% end%>
+
+<table style = "width:100%">
+	<tr>
+		<td>Long_url</td>
+		<td>Short_url</td>
+		<td>Count</td>
+	</tr>
+</table>
